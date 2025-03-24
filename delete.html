@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}Eliminar Registro{% endblock %}
+{% block content %}
+  <h1 class="mt-5">Eliminar Registro</h1>
+  <p>¿Estás seguro de que deseas eliminar el registro <strong>{{ record[1] }}</strong>?</p>
+  <form action="/delete/{{ record[0] }}" method="post">
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a href="/" class="btn btn-secondary">Cancelar</a>
+  </form>
+{% endblock %}
